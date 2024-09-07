@@ -105,9 +105,6 @@ export default {
   },
   methods: {
     ...mapActions(useLayoutStore, ["closeHovers"]),
-    delay: async function (ms) {
-      new Promise(res => setTimeout(res, ms));
-    },
     copyToClipboard: function (text) {
       copy(text).then(
           () => {
