@@ -26,6 +26,7 @@ import ShareDelete from "./ShareDelete.vue";
 import Upload from "./Upload.vue";
 import DiscardEditorChanges from "./DiscardEditorChanges.vue";
 import QuickLink from "./QuickLink.vue";
+import VLC from "@/components/prompts/VLC.vue";
 
 const layoutStore = useLayoutStore();
 
@@ -47,6 +48,7 @@ const components = new Map<string, any>([
   ["replace-rename", ReplaceRename],
   ["share", Share],
   ["quick-link", QuickLink],
+  ["vlc", VLC],
   ["upload", Upload],
   ["share-delete", ShareDelete],
   ["deleteUser", DeleteUser],

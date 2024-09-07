@@ -14,8 +14,14 @@
         <template v-if="!isMobile">
           <action
             v-if="headerButtons.vlc"
+            icon="play_circle"
+            label="Open with VLC"
+            show="vlc"
+          />
+          <action
+            v-if="headerButtons.quickLink"
             icon="link"
-            label="vlc"
+            label="Quick Link"
             show="quick-link"
           />
           <action
@@ -417,6 +423,7 @@ const headerButtons = computed(() => {
     rename: fileStore.selectedCount === 1 && authStore.user?.perm.rename,
     share: fileStore.selectedCount === 1 && authStore.user?.perm.share,
     vlc: fileStore.selectedCount === 1 && authStore.user?.perm.share,
+    quickLink: fileStore.selectedCount === 1 && authStore.user?.perm.share,
     move: fileStore.selectedCount > 0 && authStore.user?.perm.rename,
     copy: fileStore.selectedCount > 0 && authStore.user?.perm.create,
   };
