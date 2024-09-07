@@ -91,7 +91,8 @@ export default {
     const links = await api.get(this.url);
 
     if (links.length === 0) {
-      await this.submit();
+      const link = await this.submit();
+      links.push(link);
     }
 
     if (links.length > 0) {
@@ -136,6 +137,8 @@ export default {
         this.password = "";
 
         this.listing = true;
+
+        return res;
       } catch (e) {
         this.$showError(e);
       }
