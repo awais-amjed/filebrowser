@@ -25,6 +25,7 @@ import Share from "./Share.vue";
 import ShareDelete from "./ShareDelete.vue";
 import Upload from "./Upload.vue";
 import DiscardEditorChanges from "./DiscardEditorChanges.vue";
+import QuickLink from "./QuickLink.vue";
 
 const layoutStore = useLayoutStore();
 
@@ -45,6 +46,7 @@ const components = new Map<string, any>([
   ["replace", Replace],
   ["replace-rename", ReplaceRename],
   ["share", Share],
+  ["quick-link", QuickLink],
   ["upload", Upload],
   ["share-delete", ShareDelete],
   ["deleteUser", DeleteUser],

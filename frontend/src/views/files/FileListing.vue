@@ -13,6 +13,12 @@
       <template #actions>
         <template v-if="!isMobile">
           <action
+            v-if="headerButtons.vlc"
+            icon="link"
+            label="vlc"
+            show="quick-link"
+          />
+          <action
             v-if="headerButtons.share"
             icon="share"
             :label="t('buttons.share')"
@@ -410,6 +416,7 @@ const headerButtons = computed(() => {
     delete: fileStore.selectedCount > 0 && authStore.user?.perm.delete,
     rename: fileStore.selectedCount === 1 && authStore.user?.perm.rename,
     share: fileStore.selectedCount === 1 && authStore.user?.perm.share,
+    vlc: fileStore.selectedCount === 1 && authStore.user?.perm.share,
     move: fileStore.selectedCount > 0 && authStore.user?.perm.rename,
     copy: fileStore.selectedCount > 0 && authStore.user?.perm.create,
   };
